@@ -1,7 +1,7 @@
 {
   "rewrites": [
     { "source": "/", "destination": "public/index.html" },
-    { "source": "/disclaimer", "destination": "/disclaimer.html" }
+    { "source": "/track", "destination": "/track.html" }
   ],
   "redirects": [
     { "source": "/old-path", "destination": "/new-path", "permanent": true }

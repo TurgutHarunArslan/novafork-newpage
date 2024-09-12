@@ -388,7 +388,8 @@ document.addEventListener('DOMContentLoaded', async function () {
     `;
 
             mediaCard.addEventListener('click', function () {
-                fetchSelectedMedia(media.id, mediaType);
+                window.location.replace(window.location.origin + "/track?Id=" + media.id +"&Type="  + mediaType)
+                //fetchSelectedMedia(media.id, mediaType);
             });
 
             popularMedia.appendChild(mediaCard);
@@ -462,7 +463,8 @@ document.addEventListener('DOMContentLoaded', async function () {
                 const media = data.results.find(item => (item.title && item.title.toLowerCase().replace(/[^a-z0-9]+/g, '-') === title) || (item.name && item.name.toLowerCase().replace(/[^a-z0-9]+/g, '-') === title));
                 if (media) {
                     const mediaType = media.media_type || (media.title ? 'movie' : 'tv');
-                    await fetchSelectedMedia(media.id, mediaType);
+                    window.location.replace(window.location.origin + "/track?Id=" + media.id +"&Type="  + mediaType)
+                    // await fetchSelectedMedia(media.id, mediaType);
                 }
             }
         }

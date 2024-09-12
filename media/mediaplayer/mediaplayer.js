@@ -1,4 +1,3 @@
-// Global variable to store the selected provider
 let selectedProvider = 'vidlink';
 
 async function getApiKey() {
@@ -41,7 +40,7 @@ async function fetchTrailer(mediaId, mediaType, apiKey) {
     return trailer ? `https://www.youtube.com/embed/${trailer.key}` : null;
 }
 
-async function displaySelectedMedia(media, mediaType) {
+export async function displaySelectedMedia(media, mediaType) {
     const selectedMovie = document.getElementById('selectedMovie');
     const apiKey = await getApiKey();
 

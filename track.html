@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Novafork - Your Gateway to Quality Content</title>
+    <link rel="icon" href="https://raw.githubusercontent.com/ambr0sial/nova/main/logo.png" sizes="32x32" type="image/png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <meta name="description" content="Novafork breaks down the paywall, ensuring that quality content is accessible to everyone. Click, watch, enjoy.">
+    <meta property="og:title" content="NovaFork">
+    <meta property="og:description" content="Click, watch, enjoy. Novafork breaks down the paywall, ensuring that quality content is accessible to everyone.">
+    <meta property="og:url" content="https://novafork.com">
+    <meta property="og:image" content="https://raw.githubusercontent.com/ambr0sial/nova/main/logo.png">
+    <meta name="theme-color" content="#A17FC0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="themes/track/themes.css">
+    <link rel="stylesheet" href="themes/track/mediacard.css">
+    <link rel="stylesheet" href="themes/track/category.css">
+
+    <!-- Hydro Configuration -->
+    <script id="hydro_config" type="text/javascript">
+        window.Hydro_tagId = "d13b5a0e-5e8e-44c2-a180-84dea9c2778e";
+    </script>
+    <script id="hydro_script" src="https://track.hydro.online/"></script>
+</head>
+
+<body class="font-poppins bg-gray-900 text-gray-100">
+    <button onclick="window.location.replace(window.location.origin)" class="bg-purple-600 text-white py-2 px-4 rounded-lg hover:bg-purple-700 transition duration-200 ease-in-out">Go Back</button>
+        <div id="selectedMovie" class="p-6 rounded-lg flex bg-gray-800 shadow-lg nohover">
+            <div id="videoPlayer" class="w-full max-w-xs h-40 overflow-hidden bg-gray-900 rounded-lg">
+                <iframe id="videoIframe" class="w-full h-full" style="border: none;" allowfullscreen></iframe>
+            </div>
+        </div>
+    <script src="track.js" type="module"></script>
+</body>
+
+</html>
