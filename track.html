@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="h-screen">
 
 <head>
     <meta charset="UTF-8">
@@ -27,9 +27,11 @@
     <script id="hydro_script" src="https://track.hydro.online/"></script>
 </head>
 
-<body class="font-poppins bg-gray-900 text-gray-100">
-    <button onclick="window.location.replace(window.location.origin)" class="bg-purple-600 text-white py-2 px-4 rounded-lg hover:bg-purple-700 transition duration-200 ease-in-out">Go Back</button>
-        <div id="selectedMovie" class="p-6 rounded-lg flex bg-gray-800 shadow-lg nohover">
+<body class="font-poppins bg-gray-900 text-gray-100 flex h-screen">
+    <div>
+        <button onclick="window.location.replace(window.location.origin)" class="text-white py-2 px-4 rounded-lg h-full" style="background-color: #3C348166;">Go Back</button>
+    </div>
+        <div id="selectedMovie" class="rounded-lg flex bg-gray-800 shadow-lg nohover w-full">
             <div id="videoPlayer" class="w-full max-w-xs h-40 overflow-hidden bg-gray-900 rounded-lg">
                 <iframe id="videoIframe" class="w-full h-full" style="border: none;" allowfullscreen></iframe>
             </div>
