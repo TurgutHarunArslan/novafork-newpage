@@ -85,7 +85,9 @@
                             d="M21 21l-4.35-4.35M8.5 14.5a6 6 0 100-12 6 6 0 000 12z"
                     />
                 </svg>
-                <button id="searchButton" class="absolute inset-y-0 right-0 text-white font-bold py-2 px-6 rounded-r-lg bg-purple-600 hover:bg-purple-700 focus:outline-none transition duration-200 ease-in-out">Search</button>
+                <!--
+                    <button id="searchButton" class="absolute inset-y-0 right-0 text-white font-bold py-2 px-6 rounded-r-lg bg-purple-600 hover:bg-purple-700 focus:outline-none transition duration-200 ease-in-out">Search</button>
+                    -->
                 <div id="searchSuggestions" class="absolute w-full bg-zinc-800 text-white rounded-b-lg mt-1 hidden"></div>
             </div>
         </div>
@@ -106,16 +108,6 @@
             <button id="randomButton" class="bg-zinc-700 text-white font-bold py-1 px-4 text-sm rounded-lg hover:bg-zinc-600 transition duration-200 ease-in-out">Random Movie</button>
         </div>
 
-        <!-- Selected Media -->
-        <section class="mb-12">
-            <h2 class="text-2xl font-bold mb-4 text-white">Selected Media</h2>
-            <div id="selectedMovie" class="p-6 rounded-lg flex bg-gray-800 shadow-lg">
-                <div id="videoPlayer" class="w-full max-w-xs h-40 overflow-hidden bg-gray-900 rounded-lg">
-                    <iframe id="videoIframe" class="w-full h-full" style="border: none;" allowfullscreen></iframe>
-                </div>
-            </div>
-        </section>
-
         <!-- Trending Media -->
         <section class="mb-12">
             <div class="flex justify-between items-center mb-4">
@@ -135,6 +127,7 @@
                 </div>
             </div>
         </section>
+
 
         <!-- Pagination Controls -->
         <div id="paginationControls" class="flex flex-col items-center mt-8 space-y-4">

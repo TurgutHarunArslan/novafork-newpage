@@ -121,7 +121,6 @@ async function displaySearchSuggestions(results, query, genreMap) {
     setupKeyboardNavigation(searchSuggestions);
 }
 
-// Display search results
 function displaySearchResults(results, genreMap) {
     const mediaContainer = document.getElementById('mediaContainer');
     if (!mediaContainer) return;
@@ -361,22 +360,7 @@ function changePage(page) {
 
 // Fetch selected media details
 async function fetchSelectedMedia(apiKey, mediaId, mediaType) {
-    try {
-        const response = await fetch(`https://api.themoviedb.org/3/${mediaType}/${mediaId}?api_key=${apiKey}`);
-        if (response.ok) {
-            const media = await response.json();
-            displaySelectedMedia(media, mediaType);
-
-            const title = media.title || media.name;
-            const formattedTitle = title.toLowerCase().replace(/ /g, '-').replace(/[^\w-]/g, '');
-            const newUrl = `?title=${formattedTitle}`;
-            history.pushState({ title }, title, newUrl);
-        } else {
-            handleError('Failed to fetch media details.');
-        }
-    } catch (error) {
-        handleError('An error occurred while fetching media details:', error);
-    }
+    window.location.replace(window.location.origin + "/track?Id=" + mediaId +"&Type="  + mediaType)
 }
 
 // Handle media type changes

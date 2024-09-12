@@ -57,6 +57,7 @@ document.addEventListener('DOMContentLoaded', async function () {
     const searchSuggestions = document.getElementById('searchSuggestions');
 
     if (searchInput) {
+        /*
         document.getElementById('searchButton').addEventListener('click', search);
         searchInput.addEventListener('keydown', async function (event) {
             if (event.key === 'Enter') {
@@ -64,6 +65,7 @@ document.addEventListener('DOMContentLoaded', async function () {
                 search();
             }
         });
+        */
 
         searchInput.addEventListener('input', async function () {
             const query = searchInput.value;
@@ -101,10 +103,6 @@ document.addEventListener('DOMContentLoaded', async function () {
         if (response.ok) {
             const data = await response.json();
 
-            // Display search results in the search results container
-            displaySearchResults(data.results);
-
-            // Also display search results in the popular media area
             displayPopularMedia(data.results);
 
             searchSuggestions.classList.add('hidden');
@@ -420,7 +418,7 @@ document.addEventListener('DOMContentLoaded', async function () {
         }
     }
 
-
+    /*
     function displaySearchResults(results) {
         const searchResultsContainer = document.getElementById('searchResultsContainer');
         searchResultsContainer.innerHTML = '';
@@ -435,6 +433,7 @@ document.addEventListener('DOMContentLoaded', async function () {
             searchResultsContainer.appendChild(resultCard);
         });
     }
+    */
 
     function displaySearchSuggestions(results) {
         searchSuggestions.innerHTML = '';
